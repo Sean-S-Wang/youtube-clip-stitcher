@@ -1,0 +1,1 @@
+Are you a sports freak you wants to make highlights of your plays? Youtube clips is great for catching all your highlights, but there is no tooling to make a highlight reel. Introducing this script that does exactly that, all with pure python and no API access required.
