@@ -62,7 +62,7 @@ def trim_video(video_path, start_time, duration, output_clip, audio_path):
 
     # Trim video and audio to the specified segment
     video_clip = video_clip.subclipped(start_time, start_time + duration)
-    audio_clip = audio_clip.subclipped(start_time + 0.5, start_time + duration)  # Sync audio to video duration
+    audio_clip = audio_clip.subclipped(start_time + 0.25, start_time + duration)  # Sync audio to video duration
 
     # Set audio
     clip = video_clip.with_audio(audio_clip)
@@ -104,12 +104,13 @@ def process_clips(clip_urls, output_folder="downloads", final_video_name="final_
     # Cleanup individual clips (optional)
     for clip in clips:
         clip.close()
+        os.remove(clip.filename)
 
 
 # Example usage
-file_path = "clip_urls.txt"
+file_path = "kova_clips.txt"
 with open(file_path, 'r') as file:
     lines = [line.strip() for line in file]
     clip_urls = lines
 
-process_clips(clip_urls)
+process_clips(clip_urls, final_video_name="kova_highlights.mp4")
