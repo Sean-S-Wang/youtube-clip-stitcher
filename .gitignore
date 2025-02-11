@@ -1,0 +1,7 @@
+uploads/
+downloads/
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.idea/
