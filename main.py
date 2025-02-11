@@ -108,9 +108,9 @@ def process_clips(clip_urls, output_folder="downloads", final_video_name="final_
 
 
 # Example usage
-file_path = "kova_clips.txt"
+file_path = "clip_urls.txt"
 with open(file_path, 'r') as file:
     lines = [line.strip() for line in file]
     clip_urls = lines
 
-process_clips(clip_urls, final_video_name="kova_highlights.mp4")
+process_clips(clip_urls)
